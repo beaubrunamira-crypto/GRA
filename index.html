@@ -2,62 +2,175 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homemade Gelato Recipe</title>
+    <title>Homemade Gelato Recipe | Applying CSS Styling | Amira</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, sans-serif;
+            color: #333;
+            background-color: #f7ecad; /* fallback cream */
+            background-image: url("https://i.ibb.co/5XXDm1ZB/ice-cream-background-poster.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        wrapper {
+            display: block;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(191, 239, 205, 0.9); /* minty semi-transparent */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            background-color: rgba(252, 189, 211, 0.9); /* soft pink with transparency */
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 3px solid #f3c078; /* soft caramel border */
+            border-radius: 20px;
+        }
+
+        header img {
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-family: "Pacifico", cursive;
+            font-size: 60px;
+            margin: 10px 0;
+            color: #9d6140; /* chocolate brown */
+        }
+
+        h2 {
+            font-family: "Pacifico", cursive;
+            text-align: center;
+            font-size: 36px;
+            margin-top: 10px;
+            color: #ff6699; /* complementary pink */
+        }
+
+        h3 {
+            font-family: "Bungee", sans-serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #cc3366;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main img {
+            display: block;
+            margin: 20px auto;
+            width: 500px;
+            border: solid 5px #f3c078; /* soft caramel border */
+            border-radius: 20px;
+        }
+
+        article {
+            text-align: center;
+        }
+
+        section {
+            width: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: top;
+            background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+            border: solid 3px #f3c078; /* soft caramel border */
+            border-radius: 20px;
+            padding: 20px;
+            margin-right: -4px;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgba(157, 97, 64, 0.9); /* chocolate brown */
+            color: white;
+            padding: 20px;
+            border: solid 4px #f3c078; /* caramel border */
+            border-radius: 15px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
     <wrapper>
-        
+
         <header>
-            <a href="https://imgbb.com/"><img src="https://i.ibb.co/WWGQz10Z/gelao-bliss-logo.jpg" alt="gelao-bliss-logo" border="0"></a>
+            <a href="https://imgbb.com/">
+                <img src="https://i.ibb.co/WWGQz10Z/gelao-bliss-logo.jpg" alt="Gelato Bliss Logo">
+            </a>
             <h1>Gelato Bliss Kitchen</h1>
         </header>
 
- 
         <main>
             <img src="https://i.ibb.co/mVDxNvmp/gelato-flavors.jpg" alt="Colorful Gelato">
             <h2>Homemade Gelato</h2>
             <p>
-                Cool, creamy, and smooth — this homemade gelato is a taste of Italy in every spoonful. 
-                Made with a simple custard base, it’s the perfect canvas for any flavor you can dream up, 
-                from classic vanilla to rich chocolate or fresh seasonal fruits. Once you try it, you’ll 
+                Cool, creamy, and smooth — this homemade gelato is a taste of Italy in every spoonful.
+                Made with a simple custard base, it’s the perfect canvas for any flavor you can dream up,
+                from classic vanilla to rich chocolate or fresh seasonal fruits. Once you try it, you’ll
                 never want store-bought ice cream again.
             </p>
-            
-            <section>
-                <h3>Ingredients</h3>
-                <ul>
-                    <li>2 cups milk</li>
-                    <li>1 cup heavy cream</li>
-                    <li>4 egg yolks</li>
-                    <li> &frac12; cup sugar</li>
-                </ul>
-            </section>
 
-            <section>
-                <h3>Steps</h3>
-                <ol>
-                    <li>Mix milk and cream in a medium saucepan. Warm until foam forms around the edges. Remove from heat.</li>
-                    <li>Beat egg yolks and sugar until frothy in a large bowl. Gradually pour warm milk into egg yolks and sugar, whisking constantly. Return mixture to saucepan; cook over medium heat, stirring with a wooden spoon until the mixture gels slightly and coats the back of the spoon. If small egg lumps begin to show, remove from heat immediately.</li>
-                    <li>Pour the mixture through a sieve or fine strainer into a bowl. Cover, and chill for 2 hours to overnight.</li>
-                    <li>Pour the mixture into an ice cream maker, and freeze according to the manufacturer's instructions. Transfer to a sealed container, and freeze until firm, at least 2 hours.</li>
-                </ol>
-            </section>
+            <article>
+                <section>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>2 cups milk</li>
+                        <li>1 cup heavy cream</li>
+                        <li>4 egg yolks</li>
+                        <li>&frac12; cup sugar</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Steps</h3>
+                    <ol>
+                        <li>Mix milk and cream in a medium saucepan. Warm until foam forms around the edges. Remove from heat.</li>
+                        <li>Beat egg yolks and sugar until frothy in a large bowl. Gradually pour warm milk into egg yolks and sugar, whisking constantly. Return mixture to saucepan; cook over medium heat, stirring with a wooden spoon until the mixture thickens slightly and coats the back of the spoon. If small egg lumps begin to show, remove from heat immediately.</li>
+                        <li>Pour the mixture through a sieve or fine strainer into a bowl. Cover, and chill for 2 hours to overnight.</li>
+                        <li>Pour the mixture into an ice cream maker, and freeze according to the manufacturer’s instructions. Transfer to a sealed container, and freeze until firm, at least 2 hours.</li>
+                    </ol>
+                </section>
+            </article>
         </main>
-
 
         <footer>
             <p>&copy; 2025, Amira.</p>
             <p>
-                This is a fictitious web page created solely for the purpose of education and training. 
-                All products and people associated with this web page are also fictitious. Any resemblance 
-                to real brands, products, or people is purely coincidental. Information provided about the 
-                product is also fictitious and should not be construed to be representative of actual products 
+                This is a fictitious web page created solely for the purpose of education and training.
+                All products and people associated with this web page are also fictitious. Any resemblance
+                to real brands, products, or people is purely coincidental. Information provided about the
+                product is also fictitious and should not be construed to be representative of actual products
                 on the market in a similar product category.
             </p>
         </footer>
+
     </wrapper>
 </body>
 </html>
-
-
-
