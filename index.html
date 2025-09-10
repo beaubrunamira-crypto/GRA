@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homemade Gelato Recipe</title>
+    <title>Homemade Gelato Recipe | Applying CSS Styling | Amira</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +22,13 @@
         }
 
         wrapper {
-            width: 1366px;
+            max-width: 1366px;
+            width: 90%;
             margin: 0 auto;
             display: block;
             background-color: rgba(191, 239, 205, 0.9);
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .site-header {
@@ -52,7 +55,8 @@
         .main-content .main-image {
             display: block;
             margin: 20px auto;
-            width: 500px;
+            max-width: 100%;
+            height: auto;
             border: solid 5px #f3c078;
             border-radius: 20px;
         }
@@ -77,14 +81,15 @@
         }
 
         .ingredients-section, .steps-section {
-            width: 49%;
-            display: inline-block;
+            width: 100%;
+            display: block;
             box-sizing: border-box;
             vertical-align: top;
             background-color: rgba(255, 255, 255, 0.9);
             border: solid 3px #f3c078;
             border-radius: 20px;
             padding: 20px;
+            margin-bottom: 20px;
         }
 
         .spacer {
@@ -107,6 +112,15 @@
             border-radius: 15px;
             margin-top: 30px;
             font-size: 14px;
+        }
+
+      
+        @media (min-width: 900px) {
+            .ingredients-section, .steps-section {
+                width: 49%;
+                display: inline-block;
+                margin-right: -4px;
+            }
         }
     </style>
 </head>
@@ -170,5 +184,3 @@
     </wrapper>
 </body>
 </html>
-
-
