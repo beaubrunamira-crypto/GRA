@@ -9,11 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Pacifico&display=swap" rel="stylesheet">
 
-<style type="text/ccs">
-
-body {
+<style>
+    
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+body {
     font-family: Verdana, sans-serif;
     color: #333;
     background-color: #f7ecad;
@@ -23,16 +27,18 @@ body {
     background-repeat: no-repeat;
 }
 
-
 wrapper {
-    width: 1366px;
+    display: block;
+    width: 90%;
+    max-width: 1366px;
+    min-height: 100vh;
     margin: 0 auto;
     background-color: rgba(191, 239, 205, 0.9);
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* Header */
+
 .site-header {
     text-align: center;
     background-color: rgba(252, 189, 211, 0.9);
@@ -51,7 +57,7 @@ wrapper {
     font-family: "Pacifico", cursive;
     font-size: 60px;
     margin: 10px 0;
-    color: #000; /* kept black from your original code */
+    color: #000;
     text-align: center;
 }
 
@@ -103,6 +109,7 @@ ul, ol {
     line-height: 1.8;
 }
 
+
 .site-footer {
     text-align: center;
     background-color: rgba(157, 97, 64, 0.9);
@@ -113,6 +120,7 @@ ul, ol {
     margin-top: 30px;
     font-size: 14px;
 }
+
 
 @media (min-width: 900px) {
     .recipe-article {
@@ -127,7 +135,7 @@ ul, ol {
 </head>
 
 <body>
-<div class="wrapper">
+<wrapper>
 
     <header class="site-header">
         <a href="#"><img src="https://i.ibb.co/WWGQz10Z/gelao-bliss-logo.jpg" alt="Gelato Bliss Logo"></a>
@@ -178,8 +186,6 @@ ul, ol {
         </p>
     </footer>
 
-</div>
+</wrapper>
 </body>
 </html>
-
-
