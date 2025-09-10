@@ -2,39 +2,39 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Homemade Gelato Recipe | Applying CSS Styling | Amira</title>
+<title>Homemade Gelato Recipe | Amira</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Pacifico&display=swap" rel="stylesheet">
 
-<style type="text/css">
-/* Body required by professor */
+<style>
+
 body {
     padding: 0;
     margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #333;
     background-color: #f7ecad;
     background-image: url("https://i.ibb.co/Kz6qF3Yx/ice-cream-background-poster.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: Verdana, sans-serif;
-    color: #333;
-    overflow-x: auto; /* horizontal scroll if screen < 1366px */
+    min-height: 100vh;
 }
 
-/* Wrapper required by professor */
 wrapper {
-    width: 1366px;              /* fixed width as required */
-    margin: 0 auto;             /* centers wrapper */
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
     display: block;
     background-color: rgba(191, 239, 205, 0.9);
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 20px;
 }
 
-/* Header */
 .site-header {
     text-align: center;
     background-color: rgba(252, 189, 211, 0.9);
@@ -54,17 +54,15 @@ wrapper {
     font-size: 60px;
     margin: 10px 0;
     color: #000;
-    text-align: center;
 }
 
-/* Main content */
 .main-content .main-image {
     display: block;
     margin: 20px auto;
     width: 100%;
     max-width: 600px;
     height: auto;
-    border: solid 5px #f3c078;
+    border: 5px solid #f3c078;
     border-radius: 20px;
 }
 
@@ -83,7 +81,6 @@ wrapper {
     margin-bottom: 20px;
 }
 
-/* Recipe article */
 .recipe-article {
     display: flex;
     flex-direction: column;
@@ -93,7 +90,7 @@ wrapper {
 .ingredients-section, .steps-section {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.92);
-    border: solid 3px #f3c078;
+    border: 3px solid #f3c078;
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
@@ -105,19 +102,17 @@ ul, ol {
     line-height: 1.8;
 }
 
-/* Footer */
 .site-footer {
     text-align: center;
     background-color: rgba(157, 97, 64, 0.9);
     color: white;
     padding: 20px;
-    border: solid 4px #f3c078;
+    border: 4px solid #f3c078;
     border-radius: 15px;
     margin-top: 30px;
     font-size: 14px;
 }
 
-/* Horizontal stacking on wider screens */
 @media (min-width: 900px) {
     .recipe-article {
         flex-direction: row;
@@ -128,21 +123,15 @@ ul, ol {
     }
 }
 
-/* Scale tweaks for smaller screens to reduce zoomed-in effect */
-@media (max-width: 1400px) {
-    wrapper {
-        transform: scale(0.95);
-        transform-origin: top center;
+@media (max-width: 600px) {
+    .site-title {
+        font-size: 40px;
     }
-}
-@media (max-width: 1280px) {
-    wrapper {
-        transform: scale(0.9);
+    .section-title {
+        font-size: 28px;
     }
-}
-@media (max-width: 1200px) {
-    wrapper {
-        transform: scale(0.85);
+    ul, ol {
+        font-size: 16px;
     }
 }
 </style>
@@ -181,9 +170,9 @@ ul, ol {
                 <h3 style="color:#000; text-align:center; font-family:'Bungee', sans-serif;">Steps</h3>
                 <ol>
                     <li>Mix milk and cream in a medium saucepan. Warm until foam forms around the edges. Remove from heat.</li>
-                    <li>Beat egg yolks and sugar until frothy in a large bowl. Gradually pour warm milk into egg yolks and sugar, whisking constantly. Return mixture to saucepan; cook over medium heat, stirring with a wooden spoon until the mixture thickens slightly and coats the back of the spoon. If small egg lumps begin to show, remove from heat immediately.</li>
-                    <li>Pour the mixture through a sieve or fine strainer into a bowl. Cover, and chill for 2 hours to overnight.</li>
-                    <li>Pour the mixture into an ice cream maker, and freeze according to the manufacturer’s instructions. Transfer to a sealed container, and freeze until firm, at least 2 hours.</li>
+                    <li>Beat egg yolks and sugar until frothy. Gradually pour warm milk into egg yolks and sugar, whisking constantly. Return mixture to saucepan; cook until thickened and coats the back of the spoon.</li>
+                    <li>Pour through a sieve into a bowl. Cover and chill 2 hours to overnight.</li>
+                    <li>Pour mixture into an ice cream maker and freeze per instructions. Transfer to sealed container and freeze until firm.</li>
                 </ol>
             </section>
         </article>
