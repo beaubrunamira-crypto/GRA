@@ -2,9 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title> Amira B Avengers: Doomsday — Mock Movie Page</title>
+  <title>Amira B Avengers: Doomsday — Mock Movie Page</title>
   <meta name="viewport" content="width=1366, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Avengers: Doomsday — The Avengers face their darkest hour as the Doomsday Protocol threatens reality itself. Old alliances are tested, new heroes rise, and the fate of the multiverse hangs in the balance.">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #d1e1d4;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: #1d1d1d;
+    }
+    .wrapper {
+      width: 1366px;
+      margin: 0 auto;
+      display: block;
+      background-color: #d1e1d4;
+    }
+    header.site-header {
+      height: 100px;
+      background-color: #0c5b37;
+      position: relative;
+      text-align: center;
+    }
+    .logo {
+      height: 60px;
+      margin-top: 20px;
+    }
+    .auth-links {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+    }
+    .auth-links a {
+      text-decoration: none;
+      color: black;
+      margin-left: 5px;
+    }
+    .auth-links a:hover {
+      color: #fff;
+    }
+    nav.main-nav {
+      background-color: #111;
+      text-align: center;
+      margin: 0 auto;
+      padding: 15px 0;
+    }
+    nav.main-nav .nav-inner a {
+      text-decoration: none;
+      color: white;
+      margin: 0 20px;
+      font-family: Bahnschrift, Arial, sans-serif;
+      font-size: 18px;
+    }
+    nav.main-nav .nav-inner a:hover {
+      background-color: #0c5b37;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .collage {
+      display: block;
+      margin: 20px auto 6px;
+      width: 360px;
+    }
+    main {
+      text-align: center;
+      padding: 20px;
+    }
+    .title {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: 80px;
+      font-style: italic;
+      color: #0b6a3c;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero {
+      width: 640px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .caption {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .synopsis {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: left;
+    }
+    .trading-card {
+      float: right;
+      width: 180px;
+      margin: 0 0 15px 20px;
+      border: 3px solid #0c5b37;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .trading-card:hover {
+      transform: scale(1.05);
+    }
+    footer.site-footer {
+      background-color: #0c5b37;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      clear: both;
+    }
+  </style>
 </head>
 <body>
   <div class="wrapper">
@@ -30,18 +142,23 @@
     <main id="main-content" role="main">
       <h1 class="title">Avengers: Doomsday</h1>
 
-      <img class="hero" src="https://i.ibb.co/sdYMY4NG/dino-reichmuth-d6y-DSis-Ni4w-unsplash.jpg" alt="A starfield hinting at cosmic catastrophe" />
+      <!-- Video with controls for testing playback -->
+      <video class="hero" autoplay muted loop playsinline controls>
+        <source src="doomsday-trailer.mp4" type="video/mp4">
+        Sorry, your browser does not support HTML5 video.
+      </video>
+
       <div class="caption">The Avengers face their darkest hour yet.</div>
 
       <section class="synopsis">
+        <img class="trading-card" src="https://i.ibb.co/Tq2224gx/robert-torres-Evxnz-K-2-g-unsplash.jpg" alt="Avengers collector card">
+
         <p>When a cataclysmic force known only as <em>Doomsday Protocol</em> threatens to unravel reality itself, Earth’s mightiest heroes must unite against an enemy unlike any they’ve faced before.</p>
         <p>Old alliances are tested, new heroes rise, and the fate of every universe hangs in the balance.</p>
         <p>In a battle where time, loyalty, and power collide, the Avengers must confront not just the end of the world, but the end of hope itself.</p>
         <p class="cta">Coming Soon.</p>
       </section>
     </main>
-
-    <img class="trading-card" src="https://i.ibb.co/Tq2224gx/robert-torres-Evxnz-K-2-g-unsplash.jpg" alt="Avengers collector card" />
 
     <footer class="site-footer" role="contentinfo">
       <div class="legal">
