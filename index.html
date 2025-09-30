@@ -5,7 +5,15 @@
   <title>Amira B Avengers: Doomsday — Mock Movie Page</title>
   <meta name="viewport" content="width=1366, initial-scale=1" />
   <meta name="description" content="Avengers: Doomsday — The Avengers face their darkest hour as the Doomsday Protocol threatens reality itself. Old alliances are tested, new heroes rise, and the fate of the multiverse hangs in the balance.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+
   <style>
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       padding: 0;
@@ -19,6 +27,7 @@
       display: block;
       background-color: #d1e1d4;
     }
+
     header.site-header {
       height: 100px;
       background-color: #0c5b37;
@@ -34,49 +43,79 @@
       right: 20px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 14px;
     }
     .auth-links a {
       text-decoration: none;
-      color: black;
+      color: #fff;
+      font-family: "Rammetto One", sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
       margin-left: 5px;
+      transition: color .15s ease, text-shadow .15s ease;
     }
     .auth-links a:hover {
-      color: #fff;
+      color: #cfe9dc;
+      text-shadow: 0 0 6px #ffffff, 0 0 12px #0c5b37, 0 0 18px #0c5b37;
     }
+
     nav.main-nav {
-      background-color: #111;
       text-align: center;
       margin: 0 auto;
-      padding: 15px 0;
+      padding: 0;
+      position: sticky;
+      top: 6px;
+      z-index: 10;
+      transition: all .25s ease;
     }
-    nav.main-nav .nav-inner a {
+    .nav-rhombus {
+      display: inline-block;
+      background: #0e0e0e;
+      padding: 12px 28px;
+      transform: skewX(-20deg);
+      border-radius: 6px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+      margin-top: -12px;
+      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+    }
+    .nav-inner {
+      transform: skewX(20deg);
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-inner a {
       text-decoration: none;
-      color: white;
-      margin: 0 20px;
-      font-family: Bahnschrift, Arial, sans-serif;
-      font-size: 18px;
+      color: #fff;
+      font-family: "Rammetto One", sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 4px 2px;
+      transition: transform .15s ease, color .15s ease, text-shadow .15s ease;
     }
-    nav.main-nav .nav-inner a:hover {
-      background-color: #0c5b37;
-      padding: 5px 10px;
-      border-radius: 4px;
+    .nav-inner a:hover {
+      color: #cfe9dc;
+      transform: translateY(-1px);
+      text-shadow: 0 0 6px #ffffff, 0 0 12px #0c5b37, 0 0 18px #0c5b37;
     }
+
     .collage {
       display: block;
-      margin: 20px auto 6px;
-      width: 360px;
+      width: 520px;
+      margin: 16px auto 2px;
+      transition: transform .5s ease, opacity .5s ease, filter .5s ease;
+      will-change: transform, opacity, filter;
     }
+
     main {
       text-align: center;
-      padding: 20px;
+      padding: 10px 20px 20px;
     }
     .title {
-      font-family: "Bebas Neue", Impact, sans-serif;
+      font-family: "Boldonse", system-ui, sans-serif;
       font-size: 80px;
-      font-style: italic;
       color: #0b6a3c;
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
       text-transform: uppercase;
     }
     .hero {
@@ -86,15 +125,27 @@
       margin: 0 auto;
     }
     .caption {
-      margin-top: 10px;
-      font-size: 14px;
+      margin-top: 15px;
+      font-size: 32px;
+      font-family: "Rubik Mono One", sans-serif;
+      text-align: center;
+      letter-spacing: 1px;
+      color: #0b3d26;
     }
+
     .synopsis {
       max-width: 800px;
-      margin: 20px auto;
+      margin: 26px auto 30px;
       font-size: 18px;
       line-height: 1.5;
       text-align: left;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: 400;
+      background-color: rgba(12, 91, 55, 0.1);
+      border: 2px solid #0c5b37;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
     }
     .trading-card {
       float: right;
@@ -105,9 +156,15 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
-    .trading-card:hover {
-      transform: scale(1.05);
+    .trading-card:hover { transform: scale(1.05); }
+    .cta {
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-top: 20px;
     }
+
     footer.site-footer {
       background-color: #0c5b37;
       color: white;
@@ -115,6 +172,17 @@
       padding: 15px;
       font-size: 12px;
       clear: both;
+    }
+
+    body.scrolled .nav-rhombus {
+      transform: skewX(-20deg) scale(0.92);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      filter: drop-shadow(0 0 6px rgba(12,91,55,0.35));
+    }
+    body.scrolled .collage {
+      transform: translateY(-6px) scale(0.95) rotate(-1.5deg);
+      opacity: 0.9;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
     }
   </style>
 </head>
@@ -128,22 +196,23 @@
       </div>
     </header>
 
-    <nav class="main-nav" role="navigation" aria-label="Main">
-      <div class="nav-inner">
-        <a href="#">Menu</a>
-        <a href="#">Cast</a>
-        <a href="#">Merchandise</a>
-        <a href="#">Find a Theater Near You</a>
+    <nav class="main-nav" role="navigation" aria-label="Main" id="nav">
+      <div class="nav-rhombus">
+        <div class="nav-inner">
+          <a href="#">Menu</a>
+          <a href="#">Cast</a>
+          <a href="#">Merchandise</a>
+          <a href="#">Find a Theater Near You</a>
+        </div>
       </div>
     </nav>
 
-    <img class="collage" src="https://i.ibb.co/MkYc4d0G/erik-mclean-27k-Cu7b-XGEI-unsplash.jpg" alt="Classic Marvel comic collage" />
+    <img class="collage" id="collage" src="https://i.ibb.co/MkYc4d0G/erik-mclean-27k-Cu7b-XGEI-unsplash.jpg" alt="Classic Marvel comic collage" />
 
-    <main id="main-content" role="main">
+    <main role="main">
       <h1 class="title">Avengers: Doomsday</h1>
 
-      <!-- Video with controls for testing playback -->
-      <video class="hero" autoplay muted loop playsinline controls>
+      <video class="hero" autoplay muted loop playsinline controls id="trailer">
         <source src="doomsday-trailer.mp4" type="video/mp4">
         Sorry, your browser does not support HTML5 video.
       </video>
@@ -152,11 +221,10 @@
 
       <section class="synopsis">
         <img class="trading-card" src="https://i.ibb.co/Tq2224gx/robert-torres-Evxnz-K-2-g-unsplash.jpg" alt="Avengers collector card">
-
         <p>When a cataclysmic force known only as <em>Doomsday Protocol</em> threatens to unravel reality itself, Earth’s mightiest heroes must unite against an enemy unlike any they’ve faced before.</p>
         <p>Old alliances are tested, new heroes rise, and the fate of every universe hangs in the balance.</p>
         <p>In a battle where time, loyalty, and power collide, the Avengers must confront not just the end of the world, but the end of hope itself.</p>
-        <p class="cta">Coming Soon.</p>
+        <p class="cta">COMING SOON</p>
       </section>
     </main>
 
@@ -168,5 +236,30 @@
     </footer>
 
   </div>
+
+  <script>
+    (function() {
+      const nav = document.getElementById('nav');
+      const collage = document.getElementById('collage');
+      const stopPoint = collage.offsetTop + collage.offsetHeight;
+
+      function onScroll() {
+        if (window.scrollY > stopPoint) {
+          nav.style.position = 'relative';
+        } else {
+          nav.style.position = 'sticky';
+          nav.style.top = '6px';
+        }
+
+        if (window.scrollY > 120) {
+          document.body.classList.add('scrolled');
+        } else {
+          document.body.classList.remove('scrolled');
+        }
+      }
+      document.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 </body>
 </html>
