@@ -67,29 +67,43 @@ a { text-decoration: none; color: inherit; }
 }
 #home nav.topbar ul { display: inline-block; }
 
-/* Hero background fills section, shifted down to show marquee */
+/* Hero background fills section, shifted slightly down to show car fully */
 #home::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("https://i.ibb.co/GQbBKBKK/nils-huenerfuerst-YQindh-LXRSk-unsplash.jpg") center bottom / cover no-repeat;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%),
+    url("https://i.ibb.co/GQbBKBKK/nils-huenerfuerst-YQindh-LXRSk-unsplash.jpg") center 68% / cover no-repeat;
   z-index: 0;
-  filter: brightness(0.75);
+  filter: brightness(0.8);
 }
 
+/* Text block */
 #home .brand {
   position: relative;
   z-index: 1;
   text-align: center;
-  top: 190px; /* adjusted slightly lower for spacing */
+  top: 200px;
 }
 #home .brand h1 {
   margin: 0;
   font-family: "Rammetto One", system-ui;
-  font-size: 85px; /* smaller text size */
+  font-size: 80px;
   letter-spacing: 2px;
-  text-shadow: 0 12px 28px rgba(0,0,0,0.6);
+  color: #fff;
+  text-shadow:
+    0 0 10px #ff3b3b,
+    0 0 20px #ff3b3b,
+    0 0 30px #ff3b3b,
+    0 0 40px #ff3b3b;
+  animation: neonPulse 2s ease-in-out infinite alternate;
 }
+@keyframes neonPulse {
+  from { text-shadow: 0 0 10px #ff3b3b, 0 0 20px #ff3b3b, 0 0 30px #ff3b3b; }
+  to { text-shadow: 0 0 20px #ff5f5f, 0 0 40px #ff5f5f, 0 0 60px #ff5f5f; }
+}
+
 #home .tagline {
   margin-top: 10px;
   font-size: 26px;
@@ -123,7 +137,6 @@ a { text-decoration: none; color: inherit; }
   padding: 0 60px 60px 60px;
 }
 
-/* Sticky image inside the media section only */
 #media .sticky-left {
   position: sticky;
   top: 120px;
