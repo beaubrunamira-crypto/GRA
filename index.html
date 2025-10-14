@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Apollo Theater | Amira Beaubrun</title>
 
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto+Condensed:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
@@ -27,8 +26,15 @@ wrapper {
   background-color: #111;
 }
 section {
-  height: 768px;
   position: relative;
+}
+
+#home {
+  position: relative;
+  min-height: 768px;
+  overflow: hidden;
+  height: auto;
+  padding-bottom: 100px; /* space for calendar */
 }
 
 ul { margin: 0; padding: 0; list-style: none; }
@@ -51,12 +57,6 @@ h1 {
   font-family: "Russo One", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-#home {
-  position: relative;
-  height: 768px;
-  overflow: hidden;
 }
 
 #home nav.topbar {
@@ -124,8 +124,10 @@ h1 {
 
 .calendar {
   display: block;
-  margin: 20px auto;   /* centers horizontally */
-  max-width: 100%;     
+  margin: 40px auto 0 auto;
+  border: none;
+  max-width: 90%;
+  height: 600px;
 }
 
 .media-wrap { background-color: #1d1d1d; height: 100%; }
@@ -260,8 +262,8 @@ footer {
       <h1>APOLLO THEATER</h1>
       <p class="tagline">Harlem, New York</p>
       <a class="cta" href="https://www.apollotheater.org/" target="_blank" rel="noopener">Explore Shows</a>
-<iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=e5044e88ce732281fbd9fb5c878a79e6d2dcb7e5ba5e0dc778d6943a05ac26ec%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
+      <iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=e5044e88ce732281fbd9fb5c878a79e6d2dcb7e5ba5e0dc778d6943a05ac26ec%40group.calendar.google.com&ctz=America%2FLos_Angeles" frameborder="0" scrolling="no"></iframe>
     </div>
   </section>
 
@@ -285,7 +287,6 @@ footer {
           </p>
 
           <iframe width="800" height="400" src="https://www.youtube.com/embed/lqP4Hriu3es?si=XfKaOUz4mx91Icmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
         </div>
       </div>
     </div>
@@ -327,4 +328,3 @@ footer {
 </wrapper>
 </body>
 </html>
-
