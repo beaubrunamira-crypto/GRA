@@ -1,330 +1,85 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Apollo Theater | Amira Beaubrun</title>
+  <meta charset="UTF-8">
+  <title>Mac Miller | Home | Amira Beaubrun, 2025</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: lightblue;
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto+Condensed:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+    wrapper {
+      width: 1366px;
+      display: block;
+      margin: 0 auto;
+      background-color: #fff;
+    }
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  scroll-behavior: smooth;
-}
-body {
-  font-family: "Roboto Condensed", Arial, sans-serif;
-  color: #fff;
-}
-wrapper {
-  width: 1366px;
-  margin: auto;
-  display: block;
-  background-color: #111;
-}
-section {
-  position: relative;
-}
+    nav {
+      background-color: #000;
+    }
 
-#home {
-  position: relative;
-  min-height: 768px;
-  overflow: hidden;
-  height: auto;
-  padding-bottom: 100px; 
-}
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-ul { margin: 0; padding: 0; list-style: none; }
-li {
-  display: inline-block;
-  padding: 40px 40px 20px 40px;
-  margin-right: 40px;
-  color: #fff;
-  font-weight: 300;
-  font-size: 20px;
-}
-li:hover {
-  background-color: #c01a2c;
-  border-bottom: solid 2px #fff;
-  transition: .2s;
-}
-a { text-decoration: none; color: inherit; }
+    nav ul li {
+      display: inline-block;
+      padding: 20px;
+    }
 
-h1 {
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
 
-#home nav.topbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background-color: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-}
-#home nav.topbar ul { display: inline-block; }
+    nav ul li a:hover {
+      color: blue; /* Hover effect */
+    }
 
-#home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%),
-    url("https://i.ibb.co/GQbBKBKK/nils-huenerfuerst-YQindh-LXRSk-unsplash.jpg") center 68% / cover no-repeat;
-  z-index: 0;
-  filter: brightness(0.8);
-}
-
-#home .brand {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  top: 200px;
-}
-#home .brand h1 {
-  margin: 0;
-  font-size: 80px;
-  letter-spacing: 2px;
-  color: #fff;
-  text-shadow:
-    0 0 10px #ff3b3b,
-    0 0 20px #ff3b3b,
-    0 0 30px #ff3b3b,
-    0 0 40px #ff3b3b;
-  animation: neonPulse 2s ease-in-out infinite alternate;
-}
-@keyframes neonPulse {
-  from { text-shadow: 0 0 10px #ff3b3b, 0 0 20px #ff3b3b, 0 0 30px #ff3b3b; }
-  to { text-shadow: 0 0 20px #ff5f5f, 0 0 40px #ff5f5f, 0 0 60px #ff5f5f; }
-}
-
-#home .tagline {
-  margin-top: 10px;
-  font-size: 26px;
-  font-weight: 300;
-  opacity: 0.9;
-}
-#home .cta {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 22px;
-  font-size: 22px;
-  border: 2px solid #fff;
-  border-radius: 40px;
-  color: #fff;
-}
-#home .cta:hover { color: #c01a2c; border-color: #c01a2c; }
-
-.calendar {
-  display: block;
-  margin: 40px auto 0 auto;
-  border: none;
-  max-width: 90%;
-  height: 600px;
-}
-
-.media-wrap { background-color: #1d1d1d; height: 100%; }
-
-.medianav {
-  background-color: rgba(0,0,0,0.7);
-  text-align: center;
-  margin-top: 150px;
-}
-.medianav ul { display: inline-block; }
-
-#media .media-inner {
-  display: flex;
-  gap: 24px;
-  padding: 0 60px 60px 60px;
-}
-
-#media .sticky-left {
-  position: sticky;
-  top: 120px;
-  align-self: flex-start;
-  width: 360px;
-  height: 540px;
-  object-fit: cover;
-  border-right: 6px solid #c01a2c;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  z-index: 1;
-}
-#media .media-content {
-  flex: 1;
-  padding-top: 120px;
-}
-.MediaHeading {
-  font-family: "Rammetto One", system-ui;
-  font-size: 70px;
-  margin: 0 0 18px 0;
-  text-align: left;
-}
-.media-deck {
-  font-size: 22px;
-  line-height: 1.5;
-  max-width: 760px;
-  opacity: 0.95;
-  margin-bottom: 24px;
-}
-.youtubevid {
-  width: 100%;
-  max-width: 860px;
-  height: 485px;
-  border: 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  display: block;
-}
-
-.location-wrap {
-  background-color: #222;
-  min-height: 100vh;
-  padding: 0 60px 260px 60px;
-  position: relative;
-  z-index: 1;
-}
-
-.locationnav {
-  background-color: rgba(0,0,0,0.7);
-  text-align: center;
-  margin-top: 150px;
-}
-.locationnav ul { display: inline-block; }
-
-#location .location-inner {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 28px;
-}
-
-#location .right-sticky {
-  position: sticky;
-  top: 140px;
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  border-left: 6px solid #c01a2c;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  justify-self: end;
-  z-index: 1;
-}
-
-.LocationHeading {
-  font-family: "Rammetto One", system-ui;
-  font-size: 70px;
-  margin: 120px 0 10px 0;
-  text-align: left;
-}
-.locationdesc {
-  font-size: 24px;
-  margin: 0 0 20px 0;
-}
-.map {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  height: 420px;
-  border: 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  margin-bottom: 16px;
-}
-
-footer {
-  position: relative;
-  z-index: 3;
-  font-weight: 500;
-  padding: 40px;
-  color: #bbb;
-  background: #111;
-  line-height: 1.4;
-}
-</style>
+    main {
+      padding-bottom: 200px;
+    }
+  </style>
 </head>
+
 <body>
+
 <wrapper>
 
-  <section id="home">
-    <nav class="topbar">
-      <ul>
-        <a href="#home"><li>HOME</li></a>
-        <a href="#media"><li>MEDIA</li></a>
-        <a href="#location"><li>LOCATION</li></a>
-      </ul>
-    </nav>
+<header>
+  <img src="" alt="">
+  <h1>Mac Miller</h1>
 
-    <div class="brand">
-      <h1>APOLLO THEATER</h1>
-      <p class="tagline">Harlem, New York</p>
-      <a class="cta" href="https://www.apollotheater.org/" target="_blank" rel="noopener">Explore Shows</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="tour.html">Tour</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="email.html">Email</a></li>
+      <li><a href="merch.html">Merch</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=e5044e88ce732281fbd9fb5c878a79e6d2dcb7e5ba5e0dc778d6943a05ac26ec%40group.calendar.google.com&ctz=America%2FLos_Angeles" frameborder="0" scrolling="no"></iframe>
-    </div>
-  </section>
+<main>
+  <h2>Home</h2>
+</main>
 
-  <section id="media">
-    <div class="media-wrap">
-      <nav class="medianav">
-        <ul>
-          <a href="#home"><li>HOME</li></a>
-          <a href="#media"><li>MEDIA</li></a>
-          <a href="#location"><li>LOCATION</li></a>
-        </ul>
-      </nav>
-
-      <div class="media-inner">
-        <img class="sticky-left" src="https://i.ibb.co/yFQDv1kB/annie-spratt-O9hnr-O4-Dty-E-unsplash.jpg" alt="Vintage theater seats">
-
-        <div class="media-content">
-          <h2 class="MediaHeading">MEDIA</h2>
-          <p class="media-deck">
-            Classic performances. New voices. A stage that shaped culture. Watch a clip below and imagine your own opening night at the Apollo.
-          </p>
-
-          <iframe width="800" height="400" src="https://www.youtube.com/embed/lqP4Hriu3es?si=XfKaOUz4mx91Icmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="location">
-    <div class="location-wrap">
-      <nav class="locationnav">
-        <ul>
-          <a href="#home"><li>HOME</li></a>
-          <a href="#media"><li>MEDIA</li></a>
-          <a href="#location"><li>LOCATION</li></a>
-        </ul>
-      </nav>
-
-      <div class="location-inner">
-        <div class="left-col">
-          <h2 class="LocationHeading">LOCATION</h2>
-          <h4 class="locationdesc">
-            Apollo Theater<br>
-            253 W 125th St, New York, NY 10027 • (212) 531-5300
-          </h4>
-
-          <iframe class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.495089626171!2d-73.9558774!3d40.810009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f63dd1f3b10b%3A0x7f8d1ed0b6d5f10f!2sApollo%20Theater!5e0!3m2!1sen!2sus!4v1700000000000"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
-          </iframe>
-        </div>
-
-        <img class="right-sticky" src="https://i.ibb.co/wFXDXyCm/gregory-brainard-7y-Er-A3-N9-Hrg-unsplash.jpg" alt="Apollo exterior at night">
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025, Amira Beaubrun. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
-  </footer>
+<footer>
+  <p>© 2025, Amira Beaubrun. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+</footer>
 
 </wrapper>
+
 </body>
 </html>
