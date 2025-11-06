@@ -1,213 +1,384 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Louis Vuitton Denim Jacket | Amira Beaubrun 2025</title>
+  <meta charset="UTF-8" />
+  <title>Louis Vuitton Denim Jacket | Amira Beaubrun 2025</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-  body{
-    margin:0;
-    padding:0;
-    background:#ccc;
-    font-family:"Poppins",sans-serif;
-    color:#111;
-  }
+  <style>
+    html, body {
+      height: 100%;
+    }
 
-  wrapper{
-    display:block;
-    width:1366px;
-    margin:0 auto;
-    background:#fff;
-  }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ccc;
+      font-family: "Cormorant Garamond", serif;
+      color: #111;
+      letter-spacing: 0.3px;
+    }
 
-  nav{
-    width:100%;
-    background:#000;
-  }
+    wrapper {
+      display: block;
+      width: 1366px;
+      margin: 0 auto;
+      background: #fff;
+    }
 
-  nav .nav-inner{
-    max-width:1366px;
-    margin:0 auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:18px 0;
-  }
+    nav {
+      background: #000;
+      color: #fff;
+      width: 100%;
+    }
 
-  nav ul{
-    list-style:none;
-    display:flex;
-    margin:0;
-    padding:0;
-    gap:28px;
-  }
+    .nav-inner {
+      width: 1366px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 18px 0;
+    }
 
-  nav ul li a{
-    text-decoration:none;
-    color:#fff;
-    font-weight:500;
-    font-size:16px;
-    letter-spacing:.5px;
-    transition:all .3s ease;
-    position:relative;
-  }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 28px;
+    }
 
-  nav ul li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:0;
-    height:2px;
-    background:gold;
-    transition:width .3s ease;
-  }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 18px;
+      position: relative;
+      transition: all .3s ease;
+    }
 
-  nav ul li a:hover::after{width:100%;}
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: gold;
+      transition: width .3s ease;
+    }
 
-  nav ul li a:hover{
-    color:#ffd700;
-    text-shadow:
-      0 0 6px rgba(255,215,0,.8),
-      0 0 14px rgba(255,215,0,.6),
-      0 0 20px rgba(255,215,0,.4);
-  }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
 
-  header,footer{padding:25px;text-align:center;}
-  footer{font-size:13px;color:#666;}
+    nav ul li a:hover {
+      color: #ffd700;
+      text-shadow:
+        0 0 6px rgba(255, 215, 0, .8),
+        0 0 14px rgba(255, 215, 0, .6),
+        0 0 20px rgba(255, 215, 0, .4);
+    }
 
-  header img{
-    width:220px;
-    height:auto;
-  }
+    .nav-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: #000;
+      box-shadow:
+        0 0 10px rgba(255, 215, 0, .25),
+        0 0 20px rgba(255, 215, 0, .18),
+        0 0 30px rgba(255, 215, 0, .12);
+    }
 
-  main{
-    display:flex;
-    gap:40px;
-    justify-content:center;
-    align-items:flex-start;
-    padding:40px;
-  }
+    #nav-placeholder {
+      height: 0;
+    }
 
-  #stage{width:50%;text-align:center;position:relative;min-height:700px;}
-  #productImg{max-width:640px;width:100%;height:auto;transition:.3s ease;}
+    header, footer {
+      padding: 25px;
+      text-align: center;
+    }
 
-  #details{width:40%;}
-  h1,h2{margin:0 0 8px;font-weight:600;}
-  .price{margin:18px 0;font-weight:600;}
+    footer {
+      font-size: 13px;
+      color: #666;
+    }
 
-  .swatches{display:flex;gap:12px;margin:14px 0;}
-  .swatch{
-    width:52px;height:52px;border-radius:50%;
-    border:2px solid #999;cursor:pointer;overflow:hidden;
-    display:inline-flex;align-items:center;justify-content:center;
-    transition:border-color .2s;
-  }
-  .swatch img{width:100%;height:100%;object-fit:cover;}
-  .swatch:hover{border-color:#000;}
+    header img {
+      width: 220px;
+      height: auto;
+    }
 
-  .btn{
-    margin-top:22px;width:100%;height:52px;border:none;
-    background:#f9f3ea;cursor:pointer;font-weight:500;transition:.3s;
-  }
-  .btn:hover{background:#000;color:#fff;}
-</style>
+    main {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+    }
+
+    #stage {
+      width: 50%;
+      text-align: center;
+      position: relative;
+      min-height: 700px;
+    }
+
+    #productImg {
+      max-width: 640px;
+      width: 100%;
+      height: auto;
+      transition: .3s ease;
+    }
+
+    #details {
+      width: 40%;
+    }
+
+    h1, h2 {
+      margin: 0 0 8px;
+      font-weight: 600;
+    }
+
+    .price {
+      margin: 18px 0;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .swatches {
+      display: flex;
+      gap: 12px;
+      margin: 14px 0;
+    }
+
+    .swatch {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px solid #999;
+      cursor: pointer;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color .2s;
+      background: #fff;
+    }
+
+    .swatch img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swatch:hover {
+      border-color: #000;
+    }
+
+    .swatch.active {
+      border-color: #000;
+    }
+
+    .sizes {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+
+    .size-btn {
+      width: 60px;
+      height: 40px;
+      border: 1px solid #999;
+      background: #fff;
+      color: #111;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .3s ease;
+      font-size: 16px;
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .size-btn:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .size-btn.active {
+      background: #000;
+      color: #fff;
+      border-color: #000;
+    }
+
+    .btn {
+      width: 100%;
+      height: 52px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all .3s ease;
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: .5px;
+    }
+
+    .btn:hover {
+      color: #ffd700;
+      text-shadow:
+        0 0 6px rgba(255, 215, 0, .8),
+        0 0 14px rgba(255, 215, 0, .6),
+        0 0 20px rgba(255, 215, 0, .4);
+    }
+
+    #pre-hero {
+      height: 140px;
+      background: #fff;
+    }
+  </style>
 </head>
 
 <body>
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <ul>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav>
-  <div class="nav-inner">
-    <ul>
-      <li><a href="#">New</a></li>
-      <li><a href="#">Women</a></li>
-      <li><a href="#">Men</a></li>
-      <li><a href="#">Accessories</a></li>
-      <li><a href="#">Collections</a></li>
-      <li><a href="#">Sale</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <div id="nav-placeholder"></div>
 
-<wrapper>
-  <header>
-    <img src="https://i.ibb.co/39Cq6jHh/IMG-1090.png" alt="Louis Vuitton logo">
-  </header>
+  <wrapper>
+    <div id="pre-hero"></div>
 
-  <main>
-    <section id="stage">
-      <img id="productImg"
-           src="https://i.ibb.co/YBgz69kR/IMG-1091.jpg"
-           alt="Floral denim jacket front">
-    </section>
+    <header>
+      <img src="https://i.ibb.co/39Cq6jHh/IMG-1090.png" alt="Louis Vuitton logo">
+    </header>
 
-    <section id="details">
-      <h2>Statement Denim Jacket</h2>
-      <p>Classic fit denim jacket available in Floral, Black, and White. Hover over a color to preview it, and hover over the jacket to view the back.</p>
-      <p class="price">$84.99</p>
+    <main>
+      <section id="stage">
+        <img id="productImg" src="https://i.ibb.co/YBgz69kR/IMG-1091.jpg" alt="Floral denim jacket front">
+      </section>
 
-      <h3>Color</h3>
-      <div class="swatches">
-        <div class="swatch"
-          data-front="https://i.ibb.co/YBgz69kR/IMG-1091.jpg"
-          data-back="https://i.ibb.co/qFgY47HZ/IMG-1092.jpg">
-          <img src="https://i.ibb.co/YBgz69kR/IMG-1091.jpg" alt="Floral swatch">
+      <section id="details">
+        <h2>Statement Denim Jacket</h2>
+        <p>Classic fit denim jacket available in Floral, Black, and White. Click a color to select it. Hover over the jacket to view the back of the selected color.</p>
+        <p class="price">$970</p>
+
+        <h3>Color</h3>
+        <div class="swatches">
+          <button class="swatch active" aria-label="Floral" data-front="https://i.ibb.co/YBgz69kR/IMG-1091.jpg" data-back="https://i.ibb.co/qFgY47HZ/IMG-1092.jpg">
+            <img src="https://i.ibb.co/YBgz69kR/IMG-1091.jpg" alt="">
+          </button>
+
+          <button class="swatch" aria-label="Black" data-front="https://i.ibb.co/8HFZCDT/D2-DEF95-B-4-FB9-40-AD-9006-F2-AAA5-C1-BD80.png" data-back="https://i.ibb.co/990r6qjP/A6-C984-F3-6-E30-480-E-9-FE8-F00-EE7610702.png">
+            <img src="https://i.ibb.co/8HFZCDT/D2-DEF95-B-4-FB9-40-AD-9006-F2-AAA5-C1-BD80.png" alt="">
+          </button>
+
+          <button class="swatch" aria-label="White" data-front="https://i.ibb.co/1NybPvz/68-DE0-E1-C-93-A3-4-C97-B7-D8-58-BE0-BF9-D0-BA.png" data-back="https://i.ibb.co/1YP4wR2N/0160-E970-9-B3-F-4424-89-BD-1934-A3988338.png">
+            <img src="https://i.ibb.co/1NybPvz/68-DE0-E1-C-93-A3-4-C97-B7-D8-58-BE0-BF9-D0-BA.png" alt="">
+          </button>
         </div>
 
-        <div class="swatch"
-          data-front="https://i.ibb.co/8HFZCDT/D2-DEF95-B-4-FB9-40-AD-9006-F2-AAA5-C1-BD80.png"
-          data-back="https://i.ibb.co/990r6qjP/A6-C984-F3-6-E30-480-E-9-FE8-F00-EE7610702.png">
-          <img src="https://i.ibb.co/8HFZCDT/D2-DEF95-B-4-FB9-40-AD-9006-F2-AAA5-C1-BD80.png" alt="Black swatch">
+        <h3>Size</h3>
+        <div class="sizes">
+          <button class="size-btn">38</button>
+          <button class="size-btn">40</button>
+          <button class="size-btn active">42</button>
+          <button class="size-btn">44</button>
+          <button class="size-btn">46</button>
+          <button class="size-btn">48</button>
         </div>
 
-        <div class="swatch"
-          data-front="https://i.ibb.co/1NybPvz/68-DE0-E1-C-93-A3-4-C97-B7-D8-58-BE0-BF9-D0-BA.png"
-          data-back="https://i.ibb.co/1YP4wR2N/0160-E970-9-B3-F-4424-89-BD-1934-A3988338.png">
-          <img src="https://i.ibb.co/1NybPvz/68-DE0-E1-C-93-A3-4-C97-B7-D8-58-BE0-BF9-D0-BA.png" alt="White swatch">
-        </div>
-      </div>
+        <button class="btn">Add to Bag</button>
+        <p style="margin-top:12px;font-size:14px;">Product displayed is a size 42.</p>
+      </section>
+    </main>
 
-      <button class="btn">Add to Bag</button>
-      <p style="margin-top:12px;font-size:14px;">Product displayed is a size 42.</p>
-    </section>
-  </main>
+    <footer>
+      <p>© 2025, Amira Beaubrun. This is a fictitious web page created solely for educational purposes.</p>
+    </footer>
+  </wrapper>
 
-  <footer>
-    <p>© 2025, Amira Beaubrun. This is a fictitious web page created solely for educational purposes.</p>
-  </footer>
-</wrapper>
+  <script>
+    const img = document.getElementById("productImg");
+    const swatches = document.querySelectorAll(".swatch");
+    const sizeBtns = document.querySelectorAll(".size-btn");
 
-<script>
-  const img=document.getElementById("productImg");
-  const swatches=document.querySelectorAll(".swatch");
-
-  let currentFront="https://i.ibb.co/YBgz69kR/IMG-1091.jpg";
-  let currentBack ="https://i.ibb.co/qFgY47HZ/IMG-1092.jpg";
-
-  swatches.forEach(btn=>{
-    new Image().src=btn.dataset.front;
-    new Image().src=btn.dataset.back;
-
-    btn.addEventListener("mouseenter",()=>{
-      img.src=btn.dataset.front;
-      currentFront=btn.dataset.front;
-      currentBack=btn.dataset.back;
+    swatches.forEach(s => {
+      new Image().src = s.dataset.front;
+      new Image().src = s.dataset.back;
     });
 
-    btn.addEventListener("mouseleave",()=>{
-      img.src="https://i.ibb.co/YBgz69kR/IMG-1091.jpg";
-      currentFront="https://i.ibb.co/YBgz69kR/IMG-1091.jpg";
-      currentBack="https://i.ibb.co/qFgY47HZ/IMG-1092.jpg";
-    });
-  });
+    let currentFront = document.querySelector(".swatch.active").dataset.front;
+    let currentBack = document.querySelector(".swatch.active").dataset.back;
 
-  img.addEventListener("mouseenter",()=>{img.src=currentBack;});
-  img.addEventListener("mouseleave",()=>{img.src=currentFront;});
-</script>
+    swatches.forEach(btn => {
+      btn.addEventListener("click", () => {
+        swatches.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentFront = btn.dataset.front;
+        currentBack = btn.dataset.back;
+        img.src = currentFront;
+        img.alt = `Denim jacket front (${btn.ariaLabel.toLowerCase()})`;
+      });
+    });
+
+    img.addEventListener("mouseenter", () => {
+      img.src = currentBack;
+    });
+
+    img.addEventListener("mouseleave", () => {
+      img.src = currentFront;
+    });
+
+    sizeBtns.forEach(b => {
+      b.addEventListener("click", () => {
+        sizeBtns.forEach(x => x.classList.remove("active"));
+        b.classList.add("active");
+      });
+    });
+
+    const nav = document.getElementById('site-nav');
+    const navPlaceholder = document.getElementById('nav-placeholder');
+    const stage = document.getElementById('stage');
+
+    function handleScroll() {
+      const stageTop = stage.getBoundingClientRect().top;
+      const navHeight = nav.offsetHeight;
+
+      if (window.scrollY > 0 && stageTop > navHeight + 10) {
+        if (!nav.classList.contains('nav-fixed')) {
+          nav.classList.add('nav-fixed');
+          navPlaceholder.style.height = navHeight + 'px';
+        }
+      } else {
+        if (nav.classList.contains('nav-fixed')) {
+          nav.classList.remove('nav-fixed');
+          navPlaceholder.style.height = '0px';
+        }
+      }
+    }
+
+    document.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    window.addEventListener('load', handleScroll);
+  </script>
 </body>
 </html>
