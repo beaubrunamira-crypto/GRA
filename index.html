@@ -1,154 +1,213 @@
 <!doctype html>
-<html lang="en"><!-- InstanceBegin template="/Templates/prototype.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<!-- InstanceBeginEditable name="doctitle" -->
-  <title>Mac Miller | Home | Amira Beaubrun, 2025</title>
-  <!-- InstanceEndEditable -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<title>Louis Vuitton Denim Jacket | Amira Beaubrun 2025</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Pompiere&family=Zen+Dots&display=swap" rel="stylesheet">
-<!-- InstanceBeginEditable name="pageStyles" -->
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #b80000 0%, #ff4b4b 100%);
-      font-family: 'Pompiere', Arial, sans-serif;
-      color: #fff;
-      text-align: center;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    #wrapper {
-      width: 1366px;
-      margin: 0 auto;
-      background: transparent;
-    }
+<style>
+  body{
+    margin:0;
+    padding:0;
+    background:#ccc;
+    font-family:"Poppins",sans-serif;
+    color:#111;
+  }
 
-    .site-nav {
-      background-color: #000;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+  wrapper{
+    display:block;
+    width:1366px;
+    margin:0 auto;
+    background:#fff;
+  }
 
-    .site-nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      white-space: nowrap;
-    }
+  nav{
+    width:100%;
+    background:#000;
+  }
 
-    .site-nav li {
-      display: inline-block;
-    }
+  nav .nav-inner{
+    max-width:1366px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:18px 0;
+  }
 
-    .site-nav a {
-      display: inline-block;
-      padding: 20px;
-      text-decoration: none;
-      font-family: 'Zen Dots', sans-serif;
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #fff;
-      transition: color 0.3s ease;
-    }
+  nav ul{
+    list-style:none;
+    display:flex;
+    margin:0;
+    padding:0;
+    gap:28px;
+  }
 
-    .site-nav a.is-current {
-      color: #fff;
-      background-color: #222;
-      font-weight: bold;
-    }
+  nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:500;
+    font-size:16px;
+    letter-spacing:.5px;
+    transition:all .3s ease;
+    position:relative;
+  }
 
-    .site-nav a:hover {
-      color: #3498db;
-    }
+  nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:gold;
+    transition:width .3s ease;
+  }
 
-    .header-figure {
-      margin: 20px auto;
-      max-width: 800px;
-    }
+  nav ul li a:hover::after{width:100%;}
 
-    .header-image {
-      width: 100%;
-      height: auto;
-      max-height: 280px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+  nav ul li a:hover{
+    color:#ffd700;
+    text-shadow:
+      0 0 6px rgba(255,215,0,.8),
+      0 0 14px rgba(255,215,0,.6),
+      0 0 20px rgba(255,215,0,.4);
+  }
 
-    h1 {
-      font-family: 'Anton SC', sans-serif;
-      font-size: 48px;
-      margin: 20px 0 10px 0;
-      color: #fff;
-    }
+  header,footer{padding:25px;text-align:center;}
+  footer{font-size:13px;color:#666;}
 
-    h2 {
-      font-family: 'Anton SC', sans-serif;
-      font-size: 36px;
-      margin: 0;
-      color: #fff;
-    }
+  header img{
+    width:220px;
+    height:auto;
+  }
 
-    .intro-text {
-      max-width: 900px;
-      margin: 20px auto;
-      font-family: 'Pompiere', sans-serif;
-      font-size: 24px;
-      color: #fff;
-      line-height: 1.8;
-    }
+  main{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px;
+  }
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: transparent;
-      font-size: 14px;
-      font-family: 'Pompiere', sans-serif;
-      color: #fff;
-    }
-  </style>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-<!-- InstanceParam name="HeaderBlock" type="boolean" value="true" -->
+  #stage{width:50%;text-align:center;position:relative;min-height:700px;}
+  #productImg{max-width:640px;width:100%;height:auto;transition:.3s ease;}
+
+  #details{width:40%;}
+  h1,h2{margin:0 0 8px;font-weight:600;}
+  .price{margin:18px 0;font-weight:600;}
+
+  .swatches{display:flex;gap:12px;margin:14px 0;}
+  .swatch{
+    width:52px;height:52px;border-radius:50%;
+    border:2px solid #999;cursor:pointer;overflow:hidden;
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:border-color .2s;
+  }
+  .swatch img{width:100%;height:100%;object-fit:cover;}
+  .swatch:hover{border-color:#000;}
+
+  .btn{
+    margin-top:22px;width:100%;height:52px;border:none;
+    background:#f9f3ea;cursor:pointer;font-weight:500;transition:.3s;
+  }
+  .btn:hover{background:#000;color:#fff;}
+</style>
 </head>
+
 <body>
 
-  <div id="wrapper">
-
-    <nav class="site-nav">
-  <ul>
-    <li><a href="index.html" class="is-current">Home</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="store.html">Store</a></li>
-    <li><a href="videos.html">Videos</a></li>
-    <li><a href="concerts.html">Concerts</a></li>
-    <li><a href="photos.html">Photos</a></li>
-    <li><a href="mailings.html">Mailings</a></li>
-    <li><a href="merch.html">Merch</a></li>
-    <li><a href="blogs.html">Blogs</a></li>
-    <li><a href="privacy.html">Privacy</a></li>
-  </ul>
+<nav>
+  <div class="nav-inner">
+    <ul>
+      <li><a href="#">New</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Accessories</a></li>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Sale</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
-    
-    <header>
-      <figure class="header-figure"> <img class="header-image" src="https://i.ibb.co/93dvpkQD/maxresdefault.jpg" alt="Mac Miller performing"> </figure>
-    </header>
-     <!-- InstanceBeginEditable name="main" -->
-    <h1>Mac Miller</h1>
-    <h2>Remembering His Art</h2>
-    <p class="intro-text"> Mac Miller was more than just a musician — he was a visionary artist whose vulnerability, experimentation, and honesty reshaped modern hip-hop. A multi-instrumentalist and self-taught producer, he mastered guitar, piano, drums, and the craft of recording with extraordinary skill. His artistic evolution, from “K.I.D.S.” to “Circles,” reflects not just a career, but a human journey — one defined by growth, resilience, and deep emotional resonance. As my favorite artist, his music has had a profound impact on my life and the lives of millions around the world, leaving a legacy that continues to inspire creativity, healing, and connection across generations. </p>
-    <!-- InstanceEndEditable -->
-<footer>
-    © 2025, Amira Beaubrun. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+<wrapper>
+  <header>
+    <img src="https://i.ibb.co/39Cq6jHh/IMG-1090.png" alt="Louis Vuitton logo">
+  </header>
+
+  <main>
+    <section id="stage">
+      <img id="productImg"
+           src="https://i.ibb.co/YBgz69kR/IMG-1091.jpg"
+           alt="Floral denim jacket front">
+    </section>
+
+    <section id="details">
+      <h2>Statement Denim Jacket</h2>
+      <p>Classic fit denim jacket available in Floral, Black, and White. Hover over a color to preview it, and hover over the jacket to view the back.</p>
+      <p class="price">$84.99</p>
+
+      <h3>Color</h3>
+      <div class="swatches">
+        <div class="swatch"
+          data-front="https://i.ibb.co/YBgz69kR/IMG-1091.jpg"
+          data-back="https://i.ibb.co/qFgY47HZ/IMG-1092.jpg">
+          <img src="https://i.ibb.co/YBgz69kR/IMG-1091.jpg" alt="Floral swatch">
+        </div>
+
+        <div class="swatch"
+          data-front="https://i.ibb.co/8HFZCDT/D2-DEF95-B-4-FB9-40-AD-9006-F2-AAA5-C1-BD80.png"
+          data-back="https://i.ibb.co/990r6qjP/A6-C984-F3-6-E30-480-E-9-FE8-F00-EE7610702.png">
+          <img src="https://i.ibb.co/8HFZCDT/D2-DEF95-B-4-FB9-40-AD-9006-F2-AAA5-C1-BD80.png" alt="Black swatch">
+        </div>
+
+        <div class="swatch"
+          data-front="https://i.ibb.co/1NybPvz/68-DE0-E1-C-93-A3-4-C97-B7-D8-58-BE0-BF9-D0-BA.png"
+          data-back="https://i.ibb.co/1YP4wR2N/0160-E970-9-B3-F-4424-89-BD-1934-A3988338.png">
+          <img src="https://i.ibb.co/1NybPvz/68-DE0-E1-C-93-A3-4-C97-B7-D8-58-BE0-BF9-D0-BA.png" alt="White swatch">
+        </div>
+      </div>
+
+      <button class="btn">Add to Bag</button>
+      <p style="margin-top:12px;font-size:14px;">Product displayed is a size 42.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025, Amira Beaubrun. This is a fictitious web page created solely for educational purposes.</p>
   </footer>
+</wrapper>
 
-  </div>
+<script>
+  const img=document.getElementById("productImg");
+  const swatches=document.querySelectorAll(".swatch");
 
+  let currentFront="https://i.ibb.co/YBgz69kR/IMG-1091.jpg";
+  let currentBack ="https://i.ibb.co/qFgY47HZ/IMG-1092.jpg";
+
+  swatches.forEach(btn=>{
+    new Image().src=btn.dataset.front;
+    new Image().src=btn.dataset.back;
+
+    btn.addEventListener("mouseenter",()=>{
+      img.src=btn.dataset.front;
+      currentFront=btn.dataset.front;
+      currentBack=btn.dataset.back;
+    });
+
+    btn.addEventListener("mouseleave",()=>{
+      img.src="https://i.ibb.co/YBgz69kR/IMG-1091.jpg";
+      currentFront="https://i.ibb.co/YBgz69kR/IMG-1091.jpg";
+      currentBack="https://i.ibb.co/qFgY47HZ/IMG-1092.jpg";
+    });
+  });
+
+  img.addEventListener("mouseenter",()=>{img.src=currentBack;});
+  img.addEventListener("mouseleave",()=>{img.src=currentFront;});
+</script>
 </body>
-<!-- InstanceEnd --></html>
-
+</html>
