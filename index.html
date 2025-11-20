@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<title>
+<meta charset="UTF-8">
+Welcome to Kayak</title>
+<style type="text/css">
+body {
+    margin: 0;
+    background-color: #FC996D;
+}
+wrapper {
+    margin: auto;
+    width: 1200px;
+    display: block;
+}
+header {
+    height: 100px;
+    width: 1200px;
+    background-color: #FDFCFC;
+}
+#Tabs1 img {
+    width: 100px;
+    height: auto;
+}
+#Tabs1 ul p {
+    text-align: center;
+    vertical-align: baseline;
+}
+#Tabs1 li {
+    height: 150px;
+    vertical-align: bottom;
+}
+#Tabs1 ul a {
+    vertical-align: bottom;
+}
+</style>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+</head>
+
+<body>
+<wrapper>
+  <header></header>
+  <main>
+    <div id="Tabs1">
+      <ul>
+        <li><a href="#tabs-1">
+          <img src="airplane.png" alt="" width="600" height="402">
+          <p>Flights</p>
+        </a>
+          
+        </li>
+        <li><a href="#tabs-2"><img src="camera.png" alt="" width="517" height="386">
+          <p>Activites</p>
+        </a></li>
+        <li><a href="#tabs-3"><img src="car.png" alt="" width="434" height="292">
+          <p>Cars</p>
+        </a></li>
+        <li><a href="#tabs-4"><img src="cruise.png" alt="" width="378" height="274">
+          <p>Cruises</p>
+        </a></li>
+        <li><a href="#tabs-5"><img src="hotel.png" alt="" width="326" height="389">
+          <p>Hotel</p>
+        </a></li>
+      </ul>
+      <div id="tabs-1">
+        <p>Content 1</p>
+      </div>
+      <div id="tabs-2">
+        <p>Content 2</p>
+      </div>
+      <div id="tabs-3">
+        <p>Content 3</p>
+      </div>
+      <div id="tabs-4">
+        <p>Content 4</p>
+      </div>
+      <div id="tabs-5">
+        <p>Content 5</p>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</wrapper>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
+</body>
+</html>
