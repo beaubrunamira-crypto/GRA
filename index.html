@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <title>Welcome to Kayak | Amira Beaubrun, 2025</title>
 
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="kayak.js"></script>
+
 <style type="text/css">
 body {
     margin: 0;
@@ -11,7 +16,6 @@ body {
     background-color: #FC996D;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 wrapper {
     display: block;
     width: 1366px;
@@ -19,116 +23,76 @@ wrapper {
     background-color: #FFFFFF;
     min-height: 1024px;
 }
-
 header {
-    padding: 20px 40px;
+    padding: 20px 30px 10px;
 }
-
 header h1 {
     margin: 0;
     font-size: 32px;
 }
-
 header p {
     margin: 4px 0 0;
     font-size: 14px;
 }
-
 main {
-    padding: 20px 40px 40px;
+    padding: 10px 30px 30px;
 }
-
 footer {
-    padding: 16px 40px 32px;
+    padding: 16px 30px 32px;
     font-size: 11px;
     line-height: 1.4;
     color: #555555;
 }
-
-h2 {
-    font-size: 22px;
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-p {
-    font-size: 14px;
-    color: #444444;
-}
-
 #Tabs1 {
-    width: 100%;
+    width: 1366px;
     border: none;
+    background: none;
 }
-
-#Tabs1 .ui-tabs-nav {
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0 0 10px 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-}
-
-#Tabs1 .ui-tabs-nav li {
+#Tabs1 ul {
     list-style: none;
-    border: none;
-    background: #FFE1D1;
-    border-radius: 12px 12px 0 0;
-    padding: 8px 12px;
+    margin: 0 0 10px 0;
+    padding: 0;
     text-align: center;
-    min-width: 120px;
 }
-
-#Tabs1 .ui-tabs-nav li a {
+#Tabs1 ul li {
+    display: inline-block;
+    background-color: #FFE1D1;
+    border-radius: 12px 12px 0 0;
+    margin: 0 4px;
+    padding: 6px 12px 4px;
+}
+#Tabs1 ul li a {
     text-decoration: none;
     color: #1E2330;
     font-size: 13px;
     font-weight: bold;
     display: block;
 }
-
-#Tabs1 .ui-tabs-nav li img {
-    width: 48px;
-    height: auto;
+#Tabs1 ul li a img {
+    height: 70px;
+    width: auto;
     display: block;
     margin: 0 auto 4px;
 }
-
-#Tabs1 .ui-tabs-nav li.ui-tabs-active {
-    background: #FFFFFF;
+#Tabs1 ul li.ui-tabs-active {
+    background-color: #FFFFFF;
 }
-
-#Tabs1 .ui-tabs-nav li:hover {
-    background: #FFD0B4;
+#Tabs1 ul li:hover {
+    background-color: #FFD0B4;
     cursor: pointer;
 }
-
 #Tabs1 .ui-tabs-panel {
     background-color: #FFFFFF;
     border-radius: 0 12px 12px 12px;
     border: 1px solid #E5E5E5;
-    padding: 24px 24px 32px;
+    padding: 24px 24px 30px;
 }
-
-.panel-intro {
-    margin-bottom: 16px;
-    font-size: 14px;
-    color: #555555;
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    align-items: flex-end;
 }
-
-.search-row {
-    margin-bottom: 18px;
-}
-
-.search-row label {
-    display: block;
-    font-size: 12px;
-    margin-bottom: 4px;
-    color: #555555;
-}
-
 .search-row input,
 .search-row select {
     padding: 8px 10px;
@@ -139,7 +103,6 @@ p {
     margin-bottom: 8px;
     min-width: 160px;
 }
-
 .btn-primary {
     padding: 10px 18px;
     border-radius: 999px;
@@ -149,41 +112,16 @@ p {
     font-weight: bold;
     font-size: 13px;
     cursor: pointer;
-    margin-top: 4px;
 }
-
 .btn-primary:hover {
     background-color: #E15422;
 }
-
-.flex-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 24px;
-    align-items: flex-end;
-}
-
-#Tabs1 .ui-tabs-panel ul {
-    margin: 0;
-    padding-left: 16px;
-}
 </style>
 
-<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
-<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
-<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
-
-<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
-<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
-
-<script type="text/javascript">
-$(function() {
-    $("#Tabs1").tabs();
-});
-</script>
 </head>
 
-<body>
+<body onLoad="MM_preloadImages('airplane-hover.png','hotel-hover.png','car-hover.png','camera-hover.png','cruise-hover.png')">
+
 <wrapper>
   <header>
     <h1>Kayak Travel</h1>
@@ -193,42 +131,41 @@ $(function() {
   <main>
     <div id="Tabs1">
       <ul>
-        <li><a href="#tabs-1"><img src="airplane.png" alt="Flights icon">Flights</a></li>
-        <li><a href="#tabs-2"><img src="hotel.png" alt="Hotels icon">Hotels</a></li>
-        <li><a href="#tabs-3"><img src="car.png" alt="Cars icon">Cars</a></li>
-        <li><a href="#tabs-4"><img src="camera.png" alt="Bundles icon">Bundles</a></li>
-        <li><a href="#tabs-5"><img src="cruise.png" alt="Cruises icon">Cruises</a></li>
+        <li>
+          <a href="#tabs-1" onMouseOver="MM_swapImage('flightsIcon','','airplane-hover.png',1)" onMouseOut="MM_swapImgRestore()">
+            <img src="airplane.png" id="flightsIcon" alt=""><br>Flights
+          </a>
+        </li>
+        <li>
+          <a href="#tabs-2" onMouseOver="MM_swapImage('hotelsIcon','','hotel-hover.png',1)" onMouseOut="MM_swapImgRestore()">
+            <img src="hotel.png" id="hotelsIcon" alt=""><br>Hotels
+          </a>
+        </li>
+        <li>
+          <a href="#tabs-3" onMouseOver="MM_swapImage('carsIcon','','car-hover.png',1)" onMouseOut="MM_swapImgRestore()">
+            <img src="car.png" id="carsIcon" alt=""><br>Cars
+          </a>
+        </li>
+        <li>
+          <a href="#tabs-4" onMouseOver="MM_swapImage('bundlesIcon','','camera-hover.png',1)" onMouseOut="MM_swapImgRestore()">
+            <img src="camera.png" id="bundlesIcon" alt=""><br>Bundles
+          </a>
+        </li>
+        <li>
+          <a href="#tabs-5" onMouseOver="MM_swapImage('cruisesIcon','','cruise-hover.png',1)" onMouseOut="MM_swapImgRestore()">
+            <img src="cruise.png" id="cruisesIcon" alt=""><br>Cruises
+          </a>
+        </li>
       </ul>
 
-      <!-- FLIGHTS TAB -->
       <div id="tabs-1">
-        <h2>Search Flights</h2>
-        <p class="panel-intro">Find flights for your next trip.</p>
-
         <div class="flex-row">
+          <div class="search-row"><input type="text" placeholder="City or airport"></div>
+          <div class="search-row"><input type="text" placeholder="City or airport"></div>
+          <div class="search-row"><input type="date"></div>
+          <div class="search-row"><input type="date"></div>
           <div class="search-row">
-            <label for="flight-from">From</label>
-            <input type="text" id="flight-from" placeholder="City or airport">
-          </div>
-
-          <div class="search-row">
-            <label for="flight-to">To</label>
-            <input type="text" id="flight-to" placeholder="City or airport">
-          </div>
-
-          <div class="search-row">
-            <label for="flight-depart">Depart</label>
-            <input type="date" id="flight-depart">
-          </div>
-
-          <div class="search-row">
-            <label for="flight-return">Return</label>
-            <input type="date" id="flight-return">
-          </div>
-
-          <div class="search-row">
-            <label for="flight-travelers">Travelers</label>
-            <select id="flight-travelers">
+            <select>
               <option value="">Select</option>
               <option>1 traveler</option>
               <option>2 travelers</option>
@@ -237,38 +174,17 @@ $(function() {
               <option>5+ travelers</option>
             </select>
           </div>
-
-          <div class="search-row">
-            <label>&nbsp;</label>
-            <button class="btn-primary" type="button">Search flights</button>
-          </div>
+          <button class="btn-primary">Search flights</button>
         </div>
       </div>
 
-      <!-- HOTELS TAB -->
       <div id="tabs-2">
-        <h2>Search Hotels</h2>
-        <p class="panel-intro">Stay close to everything you want to see and do.</p>
-
         <div class="flex-row">
+          <div class="search-row"><input type="text" placeholder="City, landmark, or address"></div>
+          <div class="search-row"><input type="date"></div>
+          <div class="search-row"><input type="date"></div>
           <div class="search-row">
-            <label for="hotel-destination">Destination</label>
-            <input type="text" id="hotel-destination" placeholder="City, landmark, or address">
-          </div>
-
-          <div class="search-row">
-            <label for="hotel-checkin">Check in</label>
-            <input type="date" id="hotel-checkin">
-          </div>
-
-          <div class="search-row">
-            <label for="hotel-checkout">Check out</label>
-            <input type="date" id="hotel-checkout">
-          </div>
-
-          <div class="search-row">
-            <label for="hotel-guests">Guests</label>
-            <select id="hotel-guests">
+            <select>
               <option value="">Select</option>
               <option>1 guest</option>
               <option>2 guests</option>
@@ -277,48 +193,19 @@ $(function() {
               <option>5+ guests</option>
             </select>
           </div>
-
-          <div class="search-row">
-            <label>&nbsp;</label>
-            <button class="btn-primary" type="button">Search stays</button>
-          </div>
+          <button class="btn-primary">Search stays</button>
         </div>
       </div>
 
-      <!-- CARS TAB -->
       <div id="tabs-3">
-        <h2>Search Rental Cars</h2>
-        <p class="panel-intro">Find the right car for city breaks, road trips, and more.</p>
-
         <div class="flex-row">
+          <div class="search-row"><input type="text" placeholder="City or airport"></div>
+          <div class="search-row"><input type="date"></div>
+          <div class="search-row"><input type="time"></div>
+          <div class="search-row"><input type="date"></div>
+          <div class="search-row"><input type="time"></div>
           <div class="search-row">
-            <label for="car-pickup">Pickup location</label>
-            <input type="text" id="car-pickup" placeholder="City or airport">
-          </div>
-
-          <div class="search-row">
-            <label for="car-pickup-date">Pickup date</label>
-            <input type="date" id="car-pickup-date">
-          </div>
-
-          <div class="search-row">
-            <label for="car-pickup-time">Pickup time</label>
-            <input type="time" id="car-pickup-time">
-          </div>
-
-          <div class="search-row">
-            <label for="car-dropoff-date">Drop-off date</label>
-            <input type="date" id="car-dropoff-date">
-          </div>
-
-          <div class="search-row">
-            <label for="car-dropoff-time">Drop-off time</label>
-            <input type="time" id="car-dropoff-time">
-          </div>
-
-          <div class="search-row">
-            <label for="car-type">Vehicle type</label>
-            <select id="car-type">
+            <select>
               <option value="">Any</option>
               <option>Economy</option>
               <option>Compact</option>
@@ -326,43 +213,18 @@ $(function() {
               <option>Luxury</option>
             </select>
           </div>
-
-          <div class="search-row">
-            <label>&nbsp;</label>
-            <button class="btn-primary" type="button">Search cars</button>
-          </div>
+          <button class="btn-primary">Search cars</button>
         </div>
       </div>
 
-      <!-- BUNDLES TAB -->
       <div id="tabs-4">
-        <h2>Flight + Hotel Bundles</h2>
-        <p class="panel-intro">Bundle and save on your next trip.</p>
-
         <div class="flex-row">
+          <div class="search-row"><input type="text" placeholder="City or airport"></div>
+          <div class="search-row"><input type="text" placeholder="City or airport"></div>
+          <div class="search-row"><input type="date"></div>
+          <div class="search-row"><input type="date"></div>
           <div class="search-row">
-            <label for="bundle-origin">From</label>
-            <input type="text" id="bundle-origin" placeholder="City or airport">
-          </div>
-
-          <div class="search-row">
-            <label for="bundle-destination">To</label>
-            <input type="text" id="bundle-destination" placeholder="City or airport">
-          </div>
-
-          <div class="search-row">
-            <label for="bundle-checkin">Check in</label>
-            <input type="date" id="bundle-checkin">
-          </div>
-
-          <div class="search-row">
-            <label for="bundle-checkout">Check out</label>
-            <input type="date" id="bundle-checkout">
-          </div>
-
-          <div class="search-row">
-            <label for="bundle-guests">Travelers</label>
-            <select id="bundle-guests">
+            <select>
               <option value="">Select</option>
               <option>1 traveler</option>
               <option>2 travelers</option>
@@ -371,54 +233,25 @@ $(function() {
               <option>5+ travelers</option>
             </select>
           </div>
-
-          <div class="search-row">
-            <label>&nbsp;</label>
-            <button class="btn-primary" type="button">Search bundles</button>
-          </div>
+          <button class="btn-primary">Search bundles</button>
         </div>
-
-        <ul>
-          <li>Weekend city breaks</li>
-          <li>Beach and resort escapes</li>
-          <li>Long-stay work trips</li>
-        </ul>
       </div>
 
-      <!-- CRUISES TAB -->
       <div id="tabs-5">
-        <h2>Search Cruises</h2>
-        <p class="panel-intro">Explore cruise options by port, region, and length.</p>
-
         <div class="flex-row">
+          <div class="search-row"><input type="text" placeholder="Port or city"></div>
+          <div class="search-row"><input type="text" placeholder="Destination"></div>
+          <div class="search-row"><input type="date"></div>
           <div class="search-row">
-            <label for="cruise-departure-port">Departure port</label>
-            <input type="text" id="cruise-departure-port" placeholder="Port or city">
-          </div>
-
-          <div class="search-row">
-            <label for="cruise-destination">Destination</label>
-            <input type="text" id="cruise-destination" placeholder="Region or destination">
-          </div>
-
-          <div class="search-row">
-            <label for="cruise-sail-date">Sail date</label>
-            <input type="date" id="cruise-sail-date">
-          </div>
-
-          <div class="search-row">
-            <label for="cruise-nights">Nights</label>
-            <select id="cruise-nights">
+            <select>
               <option value="">Any</option>
               <option>3–5 nights</option>
               <option>6–8 nights</option>
               <option>9+ nights</option>
             </select>
           </div>
-
           <div class="search-row">
-            <label for="cruise-guests">Guests</label>
-            <select id="cruise-guests">
+            <select>
               <option value="">Select</option>
               <option>1 guest</option>
               <option>2 guests</option>
@@ -426,11 +259,7 @@ $(function() {
               <option>4+ guests</option>
             </select>
           </div>
-
-          <div class="search-row">
-            <label>&nbsp;</label>
-            <button class="btn-primary" type="button">Search cruises</button>
-          </div>
+          <button class="btn-primary">Search cruises</button>
         </div>
       </div>
 
@@ -438,8 +267,9 @@ $(function() {
   </main>
 
   <footer>
-    <p>© 2025, Amira Beaubrun. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+    © 2025, Amira Beaubrun. This is a fictitious web page created solely for educational purposes.
   </footer>
 </wrapper>
+
 </body>
 </html>
